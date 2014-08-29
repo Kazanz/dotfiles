@@ -1,0 +1,34 @@
+#!/bin/bash
+# This hook is run after every virtualenv is activated.
+_HOOK_PATH=bin/postactivate
+_PROJECT_FILE=$VIRTUAL_ENV/$VIRTUALENVWRAPPER_PROJECT_FILENAME
+
+# add a newline after virtualenv name
+export PS1="\n$PS1"
+
+if [ -s $_PROJECT_FILE ]; then
+    export _PROJECT_DIR=$(cat $_PROJECT_FILE)
+    _HOOK=$_PROJECT_DIR/$_HOOK_PATH
+    [ -f $_HOOK ] && . $_HOOK
+fi
+
+
+function virtualenv_info(){
+    # Get Virtual Env
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        # Strip out the path and just leave the env name
+        venv="${VIRTUAL_ENV##*/}"
+    else
+        # In case you don't have one activated
+        venv=''
+    fi
+    [[ -n "$venv" ]] && printf "\n($venv)"
+}
+
+# disable the default virtualenv prompt change
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+local VENV="\$(virtualenv_info)";
+# the '...' are for irrelevant info here.
+export PS1="\n\u@\h-\w${VENV}\n- "
+
