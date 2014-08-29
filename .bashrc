@@ -158,4 +158,4 @@ export PATH=$PATH:$HOME/bin/
 export PYTHONDONTWRITEBYTECODE=1
 [ -f ~/.pythonrc.py ] && export PYTHONSTARTUP=~/.pythonrc.py
 
-export PS1="\n\u@\h-\w\n- "
+export PS1="\n\u@\h-\w\n$ "

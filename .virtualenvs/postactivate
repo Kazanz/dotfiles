@@ -30,5 +30,5 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 local VENV="\$(virtualenv_info)";
 # the '...' are for irrelevant info here.
-export PS1="\n\u@\h-\w${VENV}\n- "
+export PS1="${VENV}\n\u@\h-\w\n$ "
 
