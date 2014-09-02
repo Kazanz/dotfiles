@@ -1,0 +1,81 @@
+[global_config]
+  title_transmit_bg_color = "#8ab7ff"
+  suppress_multiple_term_dialog = True
+[keybindings]
+  cycle_prev = <Primary>Tab
+  go_up = <Primary><Super>k
+  split_horiz = <Primary><Super>bracketright
+  new_window = <Primary><Shift>n
+  go_down = <Primary><Super>j
+  cycle_next = <Shift>Tab
+  split_vert = <Primary><Super>bracketleft
+  go_right = <Primary><Super>l
+  go_next = <Primary>Right
+  go_left = <Primary><Super>h
+  edit_window_title = <Primary>backslash
+[profiles]
+  [[default]]
+    background_image = None
+    background_darkness = 0.89
+    background_type = transparent
+    cursor_color = "#ffffff"
+    foreground_color = "#ffffff"
+    exit_action = hold
+[layouts]
+  [[default]]
+    [[[child0]]]
+      position = 992:24
+      type = Window
+      order = 0
+      parent = ""
+      size = 927, 1148
+    [[[child1]]]
+      position = 462
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 575
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[child4]]]
+      position = 287
+      type = VPaned
+      order = 0
+      parent = child3
+    [[[child7]]]
+      position = 285
+      type = VPaned
+      order = 1
+      parent = child3
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child4
+      title = intra
+    [[[terminal6]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child4
+      title = myv
+    [[[terminal9]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child7
+      title = www
+    [[[terminal8]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child7
+      title = store
+[plugins]
