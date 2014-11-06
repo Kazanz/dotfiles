@@ -1,0 +1,2 @@
+--python-kinds=-i
+#this is to tell ctags not to mark import as tag

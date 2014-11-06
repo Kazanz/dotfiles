@@ -90,3 +90,8 @@ let Tlist_WinWidth=28
 let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close = 1
 nmap <LocalLeader>tt :Tlist<cr>
+
+set tags=$VIRTUAL_ENV/tags,~/tags;/
+map <F5> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+" in addition to ctrl+] , i could press F5 to open up a vertical split in vim and
+" view the source code
