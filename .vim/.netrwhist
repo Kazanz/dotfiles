@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/zachary/projects/my.hivelocity.net/apps/orders'
-let g:netrw_dirhist_2='/home/zachary/projects/hivelocity-shared/hivelocity'
-let g:netrw_dirhist_3='/home/zachary/projects/intranet.hivelocity.net/intranet/tests/provisioning'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/zachary/projects/intranet.hivelocity.net/templates'
+let g:netrw_dirhist_2='/home/zachary/projects/intranet.hivelocity.net'
+let g:netrw_dirhist_3='/home/zachary/projects/intranet.hivelocity.net/intranet'
+let g:netrw_dirhist_4='/home/zachary/projects/intranet.hivelocity.net/intranet/qa_system'
+let g:netrw_dirhist_5='/home/zachary/projects/hivelocity-shared/hivelocity/static/js/cart2/customize-item'
