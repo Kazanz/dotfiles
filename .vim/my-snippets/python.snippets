@@ -454,14 +454,14 @@ endsnippet
 # Django #
 ##########
 
-snippet models.CharField "django:" b
+snippet models.CharField "django" b
 models.CharField(max_length=255)
 endsnippet
 
-snippet models.CharFieldBlank "django: max_length=255 blank null" b
+snippet models.CharFieldBlank "django max_length=255 blank null" b
 models.CharField(max_length=255, blank=True, null=True)
 endsnippet
 
 snippet render "django render" b
-render(request, '', context)
+return render(request, '', context)
 endsnippet
