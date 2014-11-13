@@ -34,6 +34,8 @@ set clipboard^=unnamed clipboard^=unnamedplus
 
 let g:pymode_rope_complete_on_dot = 0
 
+" python-mode don't show error window
+let g:pymode_lint_cwindow = 0
 
 set hlsearch
 set showmatch
