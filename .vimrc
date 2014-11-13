@@ -82,6 +82,7 @@ let g:ycm_key_list_previous_completion=['<Up>']
 "" Ultisnips
 let g:UltiSnipsListSnippets="<c-s-tab>"
 let g:UltiSnipsExpandTrigger = "<c-s-v>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
 
 """"" Settings for taglist.vim
 let Tlist_Use_Right_Window=1
