@@ -454,6 +454,11 @@ endsnippet
 # Django #
 ##########
 
+snippet pprint "import pprint" b
+from pprint import pprint
+assert 0
+endsnippet
+
 snippet models.CharField "django" b
 models.CharField(max_length=255)
 endsnippet
@@ -464,4 +469,8 @@ endsnippet
 
 snippet render "django render" b
 return render(request, '', context)
+endsnippet
+
+snippet pdb "set trace" b
+import pdb; pdb.set_trace()
 endsnippet

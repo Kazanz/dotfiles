@@ -3,13 +3,18 @@
   suppress_multiple_term_dialog = True
 [keybindings]
   cycle_prev = <Primary>Tab
-  go_up = <Primary><Super>k
-  close_window = <Primary><Super>semicolon
-  split_horiz = <Primary><Super>bracketright
-  new_window = <Primary><Shift>n
-  go_down = <Primary><Super>j
+  next_tab = <Primary><Shift>l
   cycle_next = <Shift>Tab
-  split_vert = <Primary><Super>bracketleft
+  go_up = <Primary><Super>k
+  move_tab_left = <Primary>Page_Up
+  close_window = <Primary><Shift><Super>BackSpace
+  split_horiz = <Super>bracketright
+  move_tab_right = <Primary>Page_Down
+  new_window = <Primary><Shift>n
+  prev_tab = <Primary><Shift>h
+  go_down = <Primary><Super>j
+  close_term = <Primary><Super>BackSpace
+  split_vert = <Primary><Super>bracketright
   go_right = <Primary><Super>l
   go_next = <Primary>Right
   go_left = <Primary><Super>h
@@ -23,7 +28,11 @@
     cursor_color = "#ffffff"
     foreground_color = "#ffffff"
     exit_action = hold
-    font = Monospace 9
+    font = Monospace 8
+  [[Basic]]
+    use_system_font = False
+    font = Monospace 8
+    background_image = None
 [layouts]
   [[default]]
     [[[child0]]]
