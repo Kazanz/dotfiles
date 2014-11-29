@@ -34,6 +34,8 @@ set clipboard^=unnamed clipboard^=unnamedplus
 
 let g:pymode_rope_complete_on_dot = 0
 
+" python-mode don't show error window
+let g:pymode_lint_cwindow = 0
 
 set hlsearch
 set showmatch
@@ -67,3 +69,32 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"Single Row Vertical Movement
+:nmap j gj
+:nmap k gk
+
+
+" Make ultisnips and YCM work together.
+""" YouCompleteMe
+let g:ycm_key_list_previous_completion=['<Up>']
+
+"" Ultisnips
+let g:UltiSnipsListSnippets="<c-s-tab>"
+let g:UltiSnipsExpandTrigger = "<c-s-v>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
+
+""""" Settings for taglist.vim
+let Tlist_Use_Right_Window=1
+let Tlist_Auto_Open=0
+let Tlist_Enable_Fold_Column=0
+let Tlist_Compact_Format=0
+let Tlist_WinWidth=28
+let Tlist_Exit_OnlyWindow=1
+let Tlist_File_Fold_Auto_Close = 1
+nmap <LocalLeader>tt :Tlist<cr>
+
+set tags=$VIRTUAL_ENV/tags,~/tags;/
+map <F5> :rightbelow vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+" in addition to ctrl+] , i could press F5 to open up a vertical split in vim and
+" view the source code

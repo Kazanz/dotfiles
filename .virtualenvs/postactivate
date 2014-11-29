@@ -32,3 +32,19 @@ local VENV="\$(virtualenv_info)";
 # the '...' are for irrelevant info here.
 export PS1="${VENV}\n\u@\h-\w\n$ "
 
+
+
+proj_name=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
+
+cd () {
+    if (( $# == 0 ))
+    then
+        builtin cd $HOME/projects/$proj_name
+    else
+        builtin cd "$@"
+    fi
+}
+
+cd
+
+ctags -f $VIRTUAL_ENV/tags -R $VIRTUAL_ENV/lib/python2.7/site-packages $VIRTUAL_ENV/src ${PWD} &> /dev/null & disown

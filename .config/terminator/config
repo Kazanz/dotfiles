@@ -3,79 +3,133 @@
   suppress_multiple_term_dialog = True
 [keybindings]
   cycle_prev = <Primary>Tab
-  go_up = <Primary><Super>k
-  split_horiz = <Primary><Super>bracketright
-  new_window = <Primary><Shift>n
-  go_down = <Primary><Super>j
+  next_tab = <Primary><Shift>l
   cycle_next = <Shift>Tab
-  split_vert = <Primary><Super>bracketleft
+  go_up = <Primary><Super>k
+  move_tab_left = <Primary>Page_Up
+  close_window = <Primary><Shift><Super>BackSpace
+  split_horiz = <Super>bracketright
+  move_tab_right = <Primary>Page_Down
+  new_window = <Primary><Shift>n
+  prev_tab = <Primary><Shift>h
+  go_down = <Primary><Super>j
+  close_term = <Primary><Super>BackSpace
+  split_vert = <Primary><Super>bracketright
   go_right = <Primary><Super>l
   go_next = <Primary>Right
   go_left = <Primary><Super>h
   edit_window_title = <Primary>backslash
 [profiles]
   [[default]]
-    background_image = None
+    use_system_font = False
     background_darkness = 0.89
     background_type = transparent
+    background_image = None
     cursor_color = "#ffffff"
     foreground_color = "#ffffff"
     exit_action = hold
+    font = Monospace 8
+  [[Basic]]
+    use_system_font = False
+    font = Monospace 8
+    background_image = None
 [layouts]
   [[default]]
     [[[child0]]]
-      position = 992:24
+      position = 2912:24
       type = Window
       order = 0
       parent = ""
       size = 927, 1148
     [[[child1]]]
-      position = 462
+      position = 465
       type = HPaned
       order = 0
       parent = child0
+    [[[child2]]]
+      position = 578
+      type = VPaned
+      order = 0
+      parent = child1
     [[[child3]]]
-      position = 575
+      position = 293
+      type = VPaned
+      order = 0
+      parent = child2
+    [[[child6]]]
+      position = 288
+      type = VPaned
+      order = 1
+      parent = child2
+    [[[child13]]]
+      position = 288
+      type = VPaned
+      order = 1
+      parent = child9
+    [[[child9]]]
+      position = 578
       type = VPaned
       order = 1
       parent = child1
-    [[[child4]]]
-      position = 287
+    [[[child10]]]
+      position = 293
       type = VPaned
       order = 0
-      parent = child3
-    [[[child7]]]
-      position = 285
-      type = VPaned
-      order = 1
-      parent = child3
-    [[[terminal2]]]
+      parent = child9
+    [[[terminal11]]]
       profile = default
       type = Terminal
       order = 0
-      parent = child1
+      parent = child10
+      title = intra
+    [[[terminal12]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child10
+      title = myv
     [[[terminal5]]]
       profile = default
       type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
       order = 0
-      parent = child4
-      title = intra
-    [[[terminal6]]]
+      parent = child3
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child6
+    [[[terminal15]]]
       profile = default
       type = Terminal
       order = 1
-      parent = child4
-      title = myv
-    [[[terminal9]]]
-      profile = default
-      type = Terminal
-      order = 1
-      parent = child7
+      parent = child13
       title = www
     [[[terminal8]]]
       profile = default
       type = Terminal
+      order = 1
+      parent = child6
+    [[[terminal14]]]
+      profile = default
+      type = Terminal
       order = 0
-      parent = child7
+      parent = child13
       title = store
+  [[Basic]]
+    [[[child0]]]
+      position = 65:24
+      type = Window
+      order = 0
+      parent = ""
+      size = 1855, 1176
+    [[[terminal1]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child0
 [plugins]
