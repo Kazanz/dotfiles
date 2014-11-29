@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/zachary/projects/my.hivelocity.net/apps/orders'
 let g:netrw_dirhist_2='/home/zachary/projects/hivelocity-shared/hivelocity'
 let g:netrw_dirhist_3='/home/zachary/projects/intranet.hivelocity.net/intranet/tests/provisioning'
+let g:netrw_dirhist_4='/home/bigz/projects/summary_app/summary_app'
+let g:netrw_dirhist_5='/home/bigz/projects/catan/map_generator'

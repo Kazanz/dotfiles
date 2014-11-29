@@ -1,3 +1,4 @@
 # ignore actual envs.
 .virtualenvs/*
 !.virtualenvs/postactivate
+*.netrwhist

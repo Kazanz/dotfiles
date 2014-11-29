@@ -103,6 +103,12 @@ alias suberhooks="workon uberhooks.hivelocity.net; django-admin.py syncdb; djang
 #################################################################################################################################################################################
 
 
+# Zach's Aliases
+################
+alias pyma="python manage.py"
+alias runserver="while true; do sleep 1; python manage.py runserver_plus 127.0.0.1:8000; done;"
+
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -126,10 +132,11 @@ fi
 
 # JasonTweaks
 
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
+# Virtual Env Wrapper
+export WORKON_HOME=$HOME/ENVS
 export PROJECT_HOME=$HOME/projects
-# source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
+
 
 # tmux colors fix
 alias tmux="TERM=screen-256color-bce tmux"
